@@ -8,7 +8,7 @@ import pandas as pd
 from opensearchpy import OpenSearch
 from opensearchpy import RequestsHttpConnection
 
-from finetuning_tweaks.dataset_creation.utils import ProductParserUtils
+from embed_tune.dataset_creation.utils import ProductParserUtils
 
 
 logging.basicConfig(level=logging.INFO)

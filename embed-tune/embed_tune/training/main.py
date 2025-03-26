@@ -1,12 +1,11 @@
 import torch
 
-from torch import optim
-from torch.utils.data import DataLoader
-from torch.utils.data import random_split
-
 from finetuning_tweaks.training.loader import LazyParquetDataset
 from finetuning_tweaks.training.model import EmbeddingAlign
 from finetuning_tweaks.training.train import train
+from torch import optim
+from torch.utils.data import DataLoader
+from torch.utils.data import random_split
 
 
 def main() -> None:
