@@ -1,0 +1,10 @@
+**/__pycache__
+venv
+.idea
+.env
+*.DS_Store
+.vscode
+**/*.whl
+**/*.tar.gz
+**/.mypy_cache
+**/.ruff_cache
