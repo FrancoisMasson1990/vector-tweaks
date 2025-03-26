@@ -2,7 +2,7 @@
 name = "vector-tweaks"
 version = "0.1.0"
 description = ""
-authors = ["Your Name francois-masson@hotmail.com>"]
+authors = ["Francois Masson <francois-masson@hotmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
