@@ -8,7 +8,7 @@ import pandas as pd
 from opensearchpy import OpenSearch
 from opensearchpy import RequestsHttpConnection
 
-from vector_tweaks.dataset_creation.utils import ProductParserUtils
+from finetuning_tweaks.dataset_creation.utils import ProductParserUtils
 
 
 logging.basicConfig(level=logging.INFO)
@@ -66,7 +66,7 @@ def main(file_path: str) -> None:
                 title = record.get("title")
                 description = record.get("description")
                 product_type = record.get("productTypes")
-                df.loc[len(df)] = (title, description, product_type, sanitized_knowledge_record)
+                df.loc[len(df)] = [title, description, product_type, sanitized_knowledge_record]
         result = open_search_client.scroll(scroll_id=scroll_id, scroll=scroll_time)
         scroll_id = result["_scroll_id"]
         hits = result["hits"]["hits"]

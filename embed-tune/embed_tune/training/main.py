@@ -4,9 +4,9 @@ from torch import optim
 from torch.utils.data import DataLoader
 from torch.utils.data import random_split
 
-from vector_tweaks.training.loader import LazyParquetDataset
-from vector_tweaks.training.model import EmbeddingAlign
-from vector_tweaks.training.train import train
+from finetuning_tweaks.training.loader import LazyParquetDataset
+from finetuning_tweaks.training.model import EmbeddingAlign
+from finetuning_tweaks.training.train import train
 
 
 def main() -> None:

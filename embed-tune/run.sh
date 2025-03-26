@@ -40,7 +40,7 @@ function install {
         poetry self update # Use the latest version of poetry
         nice_echo "normal" "-> Installing dependencies"
         poetry update --lock # In order to get the latest versions of the dependencies and to update the poetry.lock file
-        poetry sync --no-root --all-extras
+        poetry sync --all-extras
 }
 
 function linter {

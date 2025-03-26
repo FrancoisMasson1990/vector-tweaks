@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "vector-tweaks"
+name = "embed-tune"
 version = "0.1.0"
 description = ""
 authors = ["Francois Masson <francois-masson@hotmail.com>"]
