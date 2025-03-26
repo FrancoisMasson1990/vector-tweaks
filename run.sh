@@ -34,7 +34,8 @@ function install {
         fi
         pyenv install --skip-existing
         if ! [ -x "$(command -v poetry)" ]; then
-                brew install poetry
+                curl -sSL https://install.python-poetry.org | python3 -
+                export PATH="$HOME/.local/bin:$PATH"
         fi
         poetry self update # Use the latest version of poetry
         nice_echo "normal" "-> Installing dependencies"
