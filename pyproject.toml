@@ -13,8 +13,12 @@ numpy = "^2.2.2"
 opensearch-py = "^2.8.0"
 openai = "^1.61.1"
 pandas = "^2.2.3"
+pyarrow = "^19.0.1"
 ruff = "^0.11.2"
 seaborn = "^0.13.2"
+torch = "^2.6.0"
+tdqm = "^0.0.1"
+types-tqdm = "^4.67.0.20250319"
 
 [build-system]
 requires = ["poetry-core"]
@@ -79,6 +83,12 @@ order-by-type = true
 "typing.Tuple".msg = "Use tuple instead of typing.Tuple"
 "typing.Union".msg = "Use A | B instead"
 "typing.Optional".msg = "Use A | None instead of typing.Optional"
+
+[[tool.mypy.overrides]]
+module = [
+    "pyarrow.*"
+]
+ignore_missing_imports = true
 
 [tool.black]
 line-length = 120
