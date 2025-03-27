@@ -11,3 +11,4 @@ venv
 *.csv
 *.pt
 *.parquet
+*.txt

@@ -16,9 +16,9 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Constants
-MODEL_PATH = "../models/models_one_matrix_margin_0.2.pt"
-INPUT_FILE = "product_ids.txt"
-CLEANED_FILE = "cleaned_product_ids.txt"
+MODEL_PATH = "../models/models_title_margin_0.2.pt"
+INPUT_FILE = "../results/product_ids.txt"
+CLEANED_FILE = "../results/cleaned_product_ids.txt"
 OPENAI_MODEL = "text-embedding-ada-002"
 INDEX = os.environ["INDEX"]
 HOST = os.environ["HOST"]
