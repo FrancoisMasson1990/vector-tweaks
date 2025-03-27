@@ -35,8 +35,7 @@ Where:
 
 To simulate a production RAG pipeline:
 
-- Source: Public 10-K reports from Uber and Lyft
-- Chunking: Performed with **LlamaIndex**
+- Source: Catalog Client from the e-commerce universe
 - Query generation: Using **GPT-4o**
 - Each (query, chunk) pair is augmented with distractor chunks to form triplets
 
@@ -62,25 +61,6 @@ Where:
 
 ---
 
-## 📊 Results
-
-| Metric       | Baseline | EmbeddingAlign |
-|--------------|----------|----------------|
-| Hit Rate@4   | 0.89     | **0.95**        |
-| MRR          | 0.69     | **0.83**        |
-
-- ⏱️ **+8.6% inference time** (~10ms)
-- ⚡ Significant boost in retrieval accuracy
-
----
-
-## 🚀 Deployment Tips
-
-- Precompute `T ⋅ E(d)` once and store in your vector database
-- Apply `T` to incoming query embeddings before retrieval
-- No change needed in embedding model or vector store API
-
----
 
 ## ✅ Benefits
 
