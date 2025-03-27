@@ -9,3 +9,5 @@ venv
 **/.mypy_cache
 **/.ruff_cache
 *.csv
+*.pt
+*.parquet

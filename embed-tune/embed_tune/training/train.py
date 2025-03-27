@@ -70,6 +70,6 @@ def train(
             best_val_loss = avg_val_loss
             torch.save(
                 model.state_dict(),
-                f"projects/studies/embedding-ft/embedding_ft/models/models_title_margin_{margin}.pt",
+                f"../models/models_title_margin_{margin}.pt",
             )
             logging.info(f"--> New best model saved at epoch {epoch+1} with val loss {best_val_loss:.4f}")
