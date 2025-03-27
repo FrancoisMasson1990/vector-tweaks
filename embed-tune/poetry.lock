@@ -1525,6 +1525,21 @@ files = [
 test = ["cffi", "hypothesis", "pandas", "pytest", "pytz"]
 
 [[package]]
+name = "pyarrow-stubs"
+version = "17.19"
+description = "Type annotations for pyarrow"
+optional = false
+python-versions = "<4,>=3.8"
+groups = ["main"]
+files = [
+    {file = "pyarrow_stubs-17.19-py3-none-any.whl", hash = "sha256:9909adfbcb1356e859d5e57967d60a13e59030ea223acbcc8693ec4683982403"},
+    {file = "pyarrow_stubs-17.19.tar.gz", hash = "sha256:45af6b05ebb2c84352a111c54063db1be8bf54274b8af709c7f1c034e8d84527"},
+]
+
+[package.dependencies]
+pyarrow = ">=17"
+
+[[package]]
 name = "pydantic"
 version = "2.10.6"
 description = "Data validation using Python type hints"
@@ -2037,4 +2052,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13 <3.14"
-content-hash = "80057589d5430643eac1da00c8b0008aa03a051fd0dbda2f287e7902222bf368"
+content-hash = "42f79085536325947c5f50405a45c5e5330016a375520059c12509842320270c"

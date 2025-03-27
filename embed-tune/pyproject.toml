@@ -15,6 +15,7 @@ openai = "^1.61.1"
 pandas = "^2.2.3"
 pandas-stubs = "^2.2.3.250308"
 pyarrow = "^19.0.1"
+pyarrow-stubs = "^17.19"
 ruff = "^0.11.2"
 seaborn = "^0.13.2"
 torch = "^2.6.0"
@@ -86,9 +87,7 @@ order-by-type = true
 "typing.Optional".msg = "Use A | None instead of typing.Optional"
 
 [[tool.mypy.overrides]]
-module = [
-    "pyarrow.*"
-]
+module = []
 ignore_missing_imports = true
 
 [tool.black]

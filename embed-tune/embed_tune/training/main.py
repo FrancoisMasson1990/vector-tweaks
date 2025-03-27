@@ -19,7 +19,7 @@ def main() -> None:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = EmbeddingAlign(emb_dim=emb_dim).to(device)
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
-    dataset = LazyParquetDataset("projects/studies/embedding-ft/triplet_dataset.parquet")
+    dataset = LazyParquetDataset("../results/triplet_dataset.parquet")
 
     total_size = len(dataset)
     train_size = int(0.8 * total_size)
