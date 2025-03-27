@@ -87,7 +87,8 @@ def create_sanitized_embedding(row: dict[str, Any]) -> list[float]:
 def apply_parallel_with_progress(df: pd.DataFrame, func, num_threads: int = 10) -> list[Any]:
     results: list[Any] = [None] * len(df)
     with ThreadPoolExecutor(max_workers=num_threads) as executor:
-        futures = {executor.submit(func, row): idx for idx, row in df.iterrows()}
+        futures = {executor.submit(func, row): idx for idx, (_, row) in enumerate(df.iterrows())}
+
         for future in tqdm(as_completed(futures), total=len(df), desc="Processing"):
             idx = futures[future]
             try:
