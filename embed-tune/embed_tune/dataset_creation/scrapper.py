@@ -75,7 +75,7 @@ def main(file_path: str) -> None:
             logging.info(doc_nb)
 
     logging.info(df.describe())
-    df.to_csv(f"{file_path}.csv", index=False)
+    df.to_csv(f"../results/{file_path}.csv", index=False)
     open_search_client.clear_scroll(scroll_id=scroll_id)
 
 
